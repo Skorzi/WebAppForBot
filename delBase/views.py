@@ -9,6 +9,7 @@ class DelView(generic.View):
         for grademodel in GradeModel.objects.all():
             grademodel.likes = 0
             grademodel.dislikes = 0
+            grademodel.general = 0
             grademodel.save()
         for tguser in UserTelegram.objects.all():
             tguser.amount_likes = 6
